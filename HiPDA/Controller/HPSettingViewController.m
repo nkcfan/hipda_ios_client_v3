@@ -465,12 +465,22 @@
         
         [item deselectRowAnimated:YES];
     }];
+    
+    //
+    //
+    RETableViewItem *githubItem = [RETableViewItem itemWithTitle:@"github/hipda_ios_client_v3" accessoryType:UITableViewCellAccessoryDisclosureIndicator selectionHandler:^(RETableViewItem *item) {
+        
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/wujichao/hipda_ios_client_v3"]];
+        
+        [item deselectRowAnimated:YES];
+    }];
    
     
     
     [section addItem:reportItem];
     [section addItem:replyItem];
     [section addItem:aboutItem];
+    [section addItem:githubItem];
     
     [_manager addSection:section];
     return section;
