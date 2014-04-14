@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>HiPDA</title>
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+	body {
+		font-family: "STHeitiSC-Light","Helvetica Neue",sans-serif  !Important;
+		-webkit-text-size-adjust: **[txtadjust]**;
+		font-size: 16px !Important;
+		background-color:#f1f1ef;
+		width:95% !Important;
+		padding-top:15px !Important;
+		padding-bottom:20px !Important;
+		margin: 0 auto !Important;
+		word-wrap: break-word !Important;
+		line-height:**[lineHeight]** !Important;
+		overflow: hidden;
+	}
+
+	textarea {
+		display: none !important;
+	}
+	input {
+		display: none !important;
+	} 
+	form {
+		display: none !important;
+	}
+
+	table,thead,tbody
+	{
+		table-layout: fixed;
+		max-width:100% !important;
+	}
+
+	table, tr, td {
+		background-color: transparent !important;
+	}
+
+	table {
+    	width: 100% !important;
+    	max-width 100% !important;
+    }
+
+	h1,h2,h3 {
+    	font-size:1.0em !important;
+    }
+
+	.title {
+		font-size: 20px !Important;
+		margin-bottom: 10px;
+	}
+	.title a {
+		text-decoration: none !Important;
+		color:#333 !Important;
+	}
+
+    .content a {
+    	text-decoration: none !Important;
+    	border-bottom:1px dashed;
+    }
+    
+    img {
+    	max-width: 100% !important;
+    	width: 100% !important;
+    	height: auto !important;
+    	margin: 0 auto !important;
+    	border: 1px solid #DDD;
+    	display: block !important;
+    }
+    
+    .img_placeholder {
+        width: 100%;
+        height: 185px;
+        line-height:185px;
+        text-align:center;
+        background: #f6f6f6;
+        font-size: 0.8em;
+        /*color: #dadada;*/
+        margin: 10px 0;
+    }
+    
+    .content video,
+    .content embed,
+    .content object {
+    	display: none;
+    }
+    
+    .content pre,
+    .content code {
+    	white-space: pre-line;
+    	font-size: 0.9em;
+    }
+
+    .content img[src^='images'],
+    .content img[src^='http://www.hi-pda.com/forum/images'] {
+    	border: 0 !important;
+    	outline: 0 !important;
+    	margin: 0 !important;
+    	width: auto !important;
+    	background-color: transparent !important;
+    	display: inline !important;
+    }
+
+
+    .list {
+    	list-style: none outside none;
+    	margin: 0;
+    	padding: 0;
+    }
+
+    .bd li {
+    	border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    	padding: 4px 0px;
+    }
+
+    .list {
+    	list-style: none outside none;
+    }
+
+    .info {
+    	/*background-color: red;*/
+    	position: relative;
+    	height: 42px;
+    }
+
+    .avatar {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    }
+
+    .avatar img {
+    	width: 35px !important;
+    	height: 35px !important;
+    	-webkit-border-radius: 3.5px;
+
+    	border: 0 !important;
+    	outline: 0 !important;
+    	margin: 0 !important;
+    }
+
+    .floor {
+    	position: absolute;
+    	right: 0;
+    	bottom: 20px;
+    }
+
+    .time-ago {
+        font-size: 14px;
+    	position: absolute;
+    	right: 0;
+    	bottom: 0;
+    	color: #FF6600;
+    }
+
+    .author {
+        font-size: 14px;
+        color: #7f7f7f;
+    	position: absolute;
+    	left: 42px;
+    	bottom: 0;
+    }
+
+}
+
+</style>
+</head>
+<body>
+<div class="bd">
+
+<ul class="list" id="list">
+	<li>
+		<div class="title">
+            ##title##
+        </div>
+	</li>
+    <span style="display:none">##lists##</span>
+    <!-- 
+	<li class="" data-id="7308071" onclick="location.href='http://example';">
+		<div class="info">
+
+			<span class="avatar"><a href="large_image"><img src="http://www.hi-pda.com/forum/uc_server/data/avatar/000/45/17/59_avatar_middle.jpg"></a></span>
+			<span class="author">hswglff</span>
+			<span class="floor">1#</span>
+			<span class="time-ago">4 hours ago</span>
+
+		</div>
+
+		<div class="content">
+
+			被人传染了？冤有头债有主，谁传染给你你去找谁。因为A的病会传染给你，所以B应该像牲口一样被拉去打疫苗，这还有天理吗？你自己不打疫苗，被传染了不是很正常？<br />
+			<br />
+			就算人民因不接种疫苗而死，那也是自愿，无可厚非。人民的身体属于自己，而不是国家。人们愿意自杀，政府管得着吗？你怕死，可以花钱请别人自愿去打疫苗啊。你有什么权力强制别人去打疫苗？别人是你家养的牲口吗？<br />
+
+		</div>
+		
+	</li> -->
+</ul>
+</div>
+<script type="text/javascript">
+
+/*
+ FastClick  1.0.0
+*/
+function FastClick(a){function b(a,b){return function(){return a.apply(b,arguments)}}var c;this.trackingClick=!1;this.trackingClickStart=0;this.targetElement=null;this.lastTouchIdentifier=this.touchStartY=this.touchStartX=0;this.touchBoundary=10;this.layer=a;FastClick.notNeeded(a)||(deviceIsAndroid&&(a.addEventListener("mouseover",b(this.onMouse,this),!0),a.addEventListener("mousedown",b(this.onMouse,this),!0),a.addEventListener("mouseup",b(this.onMouse,this),!0)),a.addEventListener("click",b(this.onClick,
+this),!0),a.addEventListener("touchstart",b(this.onTouchStart,this),!1),a.addEventListener("touchmove",b(this.onTouchMove,this),!1),a.addEventListener("touchend",b(this.onTouchEnd,this),!1),a.addEventListener("touchcancel",b(this.onTouchCancel,this),!1),Event.prototype.stopImmediatePropagation||(a.removeEventListener=function(b,c,e){var f=Node.prototype.removeEventListener;"click"===b?f.call(a,b,c.hijacked||c,e):f.call(a,b,c,e)},a.addEventListener=function(b,c,e){var f=Node.prototype.addEventListener;
+"click"===b?f.call(a,b,c.hijacked||(c.hijacked=function(a){a.propagationStopped||c(a)}),e):f.call(a,b,c,e)}),"function"===typeof a.onclick&&(c=a.onclick,a.addEventListener("click",function(a){c(a)},!1),a.onclick=null))}var deviceIsAndroid=0<navigator.userAgent.indexOf("Android"),deviceIsIOS=/iP(ad|hone|od)/.test(navigator.userAgent),deviceIsIOS4=deviceIsIOS&&/OS 4_\d(_\d)?/.test(navigator.userAgent),deviceIsIOSWithBadTarget=deviceIsIOS&&/OS ([6-9]|\d{2})_\d/.test(navigator.userAgent);
+FastClick.prototype.needsClick=function(a){switch(a.nodeName.toLowerCase()){case "button":case "select":case "textarea":if(a.disabled)return!0;break;case "input":if(deviceIsIOS&&"file"===a.type||a.disabled)return!0;break;case "label":case "video":return!0}return/\bneedsclick\b/.test(a.className)};
+FastClick.prototype.needsFocus=function(a){switch(a.nodeName.toLowerCase()){case "textarea":return!0;case "select":return!deviceIsAndroid;case "input":switch(a.type){case "button":case "checkbox":case "file":case "image":case "radio":case "submit":return!1}return!a.disabled&&!a.readOnly;default:return/\bneedsfocus\b/.test(a.className)}};
+FastClick.prototype.sendClick=function(a,b){var c,d;document.activeElement&&document.activeElement!==a&&document.activeElement.blur();d=b.changedTouches[0];c=document.createEvent("MouseEvents");c.initMouseEvent(this.determineEventType(a),!0,!0,window,1,d.screenX,d.screenY,d.clientX,d.clientY,!1,!1,!1,!1,0,null);c.forwardedTouchEvent=!0;a.dispatchEvent(c)};FastClick.prototype.determineEventType=function(a){return deviceIsAndroid&&"select"===a.tagName.toLowerCase()?"mousedown":"click"};
+FastClick.prototype.focus=function(a){var b;deviceIsIOS&&a.setSelectionRange&&0!==a.type.indexOf("date")&&"time"!==a.type?(b=a.value.length,a.setSelectionRange(b,b)):a.focus()};FastClick.prototype.updateScrollParent=function(a){var b,c;b=a.fastClickScrollParent;if(!b||!b.contains(a)){c=a;do{if(c.scrollHeight>c.offsetHeight){b=c;a.fastClickScrollParent=c;break}c=c.parentElement}while(c)}b&&(b.fastClickLastScrollTop=b.scrollTop)};
+FastClick.prototype.getTargetElementFromEventTarget=function(a){return a.nodeType===Node.TEXT_NODE?a.parentNode:a};
+FastClick.prototype.onTouchStart=function(a){var b,c,d;if(1<a.targetTouches.length)return!0;b=this.getTargetElementFromEventTarget(a.target);c=a.targetTouches[0];if(deviceIsIOS){d=window.getSelection();if(d.rangeCount&&!d.isCollapsed)return!0;if(!deviceIsIOS4){if(c.identifier===this.lastTouchIdentifier)return a.preventDefault(),!1;this.lastTouchIdentifier=c.identifier;this.updateScrollParent(b)}}this.trackingClick=!0;this.trackingClickStart=a.timeStamp;this.targetElement=b;this.touchStartX=c.pageX;
+this.touchStartY=c.pageY;200>a.timeStamp-this.lastClickTime&&a.preventDefault();return!0};FastClick.prototype.touchHasMoved=function(a){a=a.changedTouches[0];var b=this.touchBoundary;return Math.abs(a.pageX-this.touchStartX)>b||Math.abs(a.pageY-this.touchStartY)>b?!0:!1};FastClick.prototype.onTouchMove=function(a){if(!this.trackingClick)return!0;if(this.targetElement!==this.getTargetElementFromEventTarget(a.target)||this.touchHasMoved(a))this.trackingClick=!1,this.targetElement=null;return!0};
+FastClick.prototype.findControl=function(a){return void 0!==a.control?a.control:a.htmlFor?document.getElementById(a.htmlFor):a.querySelector("button, input:not([type=hidden]), keygen, meter, output, progress, select, textarea")};
+FastClick.prototype.onTouchEnd=function(a){var b,c,d=this.targetElement;if(!this.trackingClick)return!0;if(200>a.timeStamp-this.lastClickTime)return this.cancelNextClick=!0;this.cancelNextClick=!1;this.lastClickTime=a.timeStamp;b=this.trackingClickStart;this.trackingClick=!1;this.trackingClickStart=0;deviceIsIOSWithBadTarget&&(c=a.changedTouches[0],d=document.elementFromPoint(c.pageX-window.pageXOffset,c.pageY-window.pageYOffset)||d,d.fastClickScrollParent=this.targetElement.fastClickScrollParent);
+c=d.tagName.toLowerCase();if("label"===c){if(b=this.findControl(d)){this.focus(d);if(deviceIsAndroid)return!1;d=b}}else if(this.needsFocus(d)){if(100<a.timeStamp-b||deviceIsIOS&&window.top!==window&&"input"===c)return this.targetElement=null,!1;this.focus(d);this.sendClick(d,a);deviceIsIOS4&&"select"===c||(this.targetElement=null,a.preventDefault());return!1}if(deviceIsIOS&&!deviceIsIOS4&&(b=d.fastClickScrollParent)&&b.fastClickLastScrollTop!==b.scrollTop)return!0;this.needsClick(d)||(a.preventDefault(),
+this.sendClick(d,a));return!1};FastClick.prototype.onTouchCancel=function(){this.trackingClick=!1;this.targetElement=null};FastClick.prototype.onMouse=function(a){return this.targetElement&&!a.forwardedTouchEvent&&a.cancelable?!this.needsClick(this.targetElement)||this.cancelNextClick?(a.stopImmediatePropagation?a.stopImmediatePropagation():a.propagationStopped=!0,a.stopPropagation(),a.preventDefault(),!1):!0:!0};
+FastClick.prototype.onClick=function(a){if(this.trackingClick)return this.targetElement=null,this.trackingClick=!1,!0;if("submit"===a.target.type&&0===a.detail)return!0;a=this.onMouse(a);a||(this.targetElement=null);return a};
+FastClick.prototype.destroy=function(){var a=this.layer;deviceIsAndroid&&(a.removeEventListener("mouseover",this.onMouse,!0),a.removeEventListener("mousedown",this.onMouse,!0),a.removeEventListener("mouseup",this.onMouse,!0));a.removeEventListener("click",this.onClick,!0);a.removeEventListener("touchstart",this.onTouchStart,!1);a.removeEventListener("touchmove",this.onTouchMove,!1);a.removeEventListener("touchend",this.onTouchEnd,!1);a.removeEventListener("touchcancel",this.onTouchCancel,!1)};
+FastClick.notNeeded=function(a){var b,c;if("undefined"===typeof window.ontouchstart)return!0;if(c=+(/Chrome\/([0-9]+)/.exec(navigator.userAgent)||[,0])[1])if(deviceIsAndroid){if((b=document.querySelector("meta[name=viewport]"))&&(-1!==b.content.indexOf("user-scalable=no")||31<c&&window.innerWidth<=window.screen.width))return!0}else return!0;return"none"===a.style.msTouchAction?!0:!1};FastClick.attach=function(a){return new FastClick(a)};
+"undefined"!==typeof define&&define.amd?define(function(){return FastClick}):"undefined"!==typeof module&&module.exports?(module.exports=FastClick.attach,module.exports.FastClick=FastClick):window.FastClick=FastClick;
+
+window.addEventListener('load', function() {
+    FastClick.attach(document.body);
+}, false);
+
+
+
+function addNewStyle(newStyle) {
+    var styleElement = document.getElementById('styles_js');
+    if (!styleElement) {
+        styleElement = document.createElement('style');
+        styleElement.type = 'text/css';
+        styleElement.id = 'styles_js';
+        document.getElementsByTagName('head')[0].appendChild(styleElement);
+    }
+    styleElement.appendChild(document.createTextNode(newStyle));
+}
+
+
+
+var list = document.getElementById("list");
+list.addEventListener("click", function(event) {
+
+    var el = event.target;
+
+    if (el.nodeName == 'A') {
+        return;
+
+    } else if (el.nodeName == 'DIV' && el.className == 'img_placeholder') {
+        return;
+
+    } else if (el.nodeName == 'IMG') {
+
+        if (el.parentNode.nodeName == 'A') {
+            return;
+        }
+        if (el.getAttribute('data-id')) {
+            location.href = el.getAttribute('data-id');
+        } else {
+            location.href = 'image://' + el.src; 
+        }
+
+    } else {
+        while (el && !el.getAttribute('data-id') ) {
+            el = el.parentNode;
+            if (el.nodeName == 'A') return;
+        }
+        if (el) location.href = el.getAttribute('data-id');
+    }
+});
+
+var img_click = function (img) {
+    location.href = 'image://' + img;
+};
+
+
+</script>
+
+</body>
+</html>

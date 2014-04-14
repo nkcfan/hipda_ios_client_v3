@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  HiPDA
+
+  Created by wujichao on 14-2-16.
+  Copyright (c) 2014年 wujichao. All rights reserved.
+*/
+"Send"="发送";
+"New Message"="新消息";
+
+/*
+ *  dzbrowser
+ */
+"TXT_LOADING" = "载入中...";
+"TXT_CLOSE" = "关闭";
+"TXT_CANCEL" = "取消";
+"TXT_ACTIONSHEET_TWITTER" = "Twitter";
+"TXT_ACTIONSHEET_FACEBOOK" = "Facebook";
+"TXT_ACTIONSHEET_COPYLINK" = "拷贝连接";
+"TXT_ACTIONSHEET_MAIL" = "Mail 链接";
+"TXT_ACTIONSHEET_SAFARI" = "Safari 打开";
+"TXT_ACTIONSHEET_COPYIMG" = "拷贝图片";
+"TXT_ACTIONSHEET_SAVEIMG" = "保存图片";
+"TXT_ALERT_NO_INTERNET" = "网络链接错误";
+"TXT_ALERT_NO_INTERNET_MESSAGE" = "无网络连接";
+"TXT_ALERT_NO_MAIL" = "Mail 错误";
+"TXT_ALERT_NO_MAIL_MESSAGE" = "您还没有设置邮件";
+"TXT_ALERT_OK" = "OK";

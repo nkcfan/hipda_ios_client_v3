@@ -1,0 +1,20 @@
+2014.1.20 
+改变了
+
+-(BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+
+//
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake) {
+        NSLog(@"检测到晃动");
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self resignFirstResponder];
+    [super viewWillDisappear:animated];
+}

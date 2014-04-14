@@ -1,0 +1,532 @@
+{
+    "2": [
+        {
+            "key": "分类",
+            "value": 0
+        },
+        {
+            "key": "聚会",
+            "value": 9
+        },
+        {
+            "key": "汽车",
+            "value": 33
+        },
+        {
+            "key": "大杂烩",
+            "value": 38
+        },
+        {
+            "key": "助学",
+            "value": 40
+        },
+        {
+            "key": "Discovery",
+            "value": 56
+        },
+        {
+            "key": "投资",
+            "value": 57
+        },
+        {
+            "key": "职场",
+            "value": 58
+        },
+        {
+            "key": "文艺",
+            "value": 65
+        },
+        {
+            "key": "版喃",
+            "value": 66
+        },
+        {
+            "key": "显摆",
+            "value": 67
+        },
+        {
+            "key": "晒物劝败",
+            "value": 79
+        },
+        {
+            "key": "YY",
+            "value": 39
+        },
+        {
+            "key": "站务",
+            "value": 19
+        }
+    ],
+    "6": [
+        {
+            "key": "分类",
+            "value": 0
+        },
+        {
+            "key": "手机",
+            "value": 1
+        },
+        {
+            "key": "掌上电脑",
+            "value": 2
+        },
+        {
+            "key": "笔记本电脑",
+            "value": 3
+        },
+        {
+            "key": "无线产品",
+            "value": 4
+        },
+        {
+            "key": "数码相机、摄像机",
+            "value": 5
+        },
+        {
+            "key": "MP3随身听",
+            "value": 6
+        },
+        {
+            "key": "各类配件",
+            "value": 7
+        },
+        {
+            "key": "其他好玩的",
+            "value": 8
+        },
+        {
+            "key": "站务",
+            "value": 19
+        }
+    ],
+    "7": [
+        {
+            "key": "分类",
+            "value": 0
+        },
+        {
+            "key": "Gadgets",
+            "value": 20
+        },
+        {
+            "key": "无线",
+            "value": 21
+        },
+        {
+            "key": "嵌入式Linux",
+            "value": 22
+        },
+        {
+            "key": "业界",
+            "value": 41
+        },
+        {
+            "key": "安卓",
+            "value": 74
+        },
+        {
+            "key": "高清播放器",
+            "value": 76
+        },
+        {
+            "key": "站务",
+            "value": 19
+        }
+    ],
+    "9": [
+        {
+            "key": "分类",
+            "value": 0
+        },
+        {
+            "key": "Symbian",
+            "value": 23
+        },
+        {
+            "key": "PalmOS",
+            "value": 24
+        },
+        {
+            "key": "Linux",
+            "value": 25
+        },
+        {
+            "key": "Windows Mobile",
+            "value": 26
+        },
+        {
+            "key": "运营商",
+            "value": 27
+        },
+        {
+            "key": "Other",
+            "value": 28
+        },
+        {
+            "key": "BlackBerry",
+            "value": 59
+        },
+        {
+            "key": "站务",
+            "value": 19
+        }
+    ],
+    "12": [
+        {
+            "key": "分类信息",
+            "value": 0
+        },
+        {
+            "key": "分类",
+            "value": 0
+        },
+        {
+            "key": "Treo",
+            "value": 43
+        },
+        {
+            "key": "Palm硬件",
+            "value": 45
+        },
+        {
+            "key": "Clie",
+            "value": 46
+        },
+        {
+            "key": "各类软件",
+            "value": 47
+        },
+        {
+            "key": "汉化",
+            "value": 48
+        },
+        {
+            "key": "Pre",
+            "value": 63
+        },
+        {
+            "key": "WebOS",
+            "value": 64
+        },
+        {
+            "key": "pixi",
+            "value": 78
+        },
+        {
+            "key": "求助",
+            "value": 18
+        },
+        {
+            "key": "站务",
+            "value": 19
+        }
+    ],
+    "14": [
+        {
+            "key": "分类信息",
+            "value": 0
+        },
+        {
+            "key": "分类",
+            "value": 0
+        },
+        {
+            "key": "心得技巧",
+            "value": 10
+        },
+        {
+            "key": "绿色汉化",
+            "value": 11
+        },
+        {
+            "key": "游戏",
+            "value": 12
+        },
+        {
+            "key": "多媒体",
+            "value": 13
+        },
+        {
+            "key": "数据库",
+            "value": 14
+        },
+        {
+            "key": "实用工具",
+            "value": 15
+        },
+        {
+            "key": "ROM",
+            "value": 16
+        },
+        {
+            "key": "硬件报告",
+            "value": 17
+        },
+        {
+            "key": "HPC",
+            "value": 44
+        },
+        {
+            "key": "求助",
+            "value": 18
+        },
+        {
+            "key": "站务",
+            "value": 19
+        }
+    ],
+    "24": [
+        {
+            "key": "分类",
+            "value": 0
+        },
+        {
+            "key": "电影",
+            "value": 29
+        },
+        {
+            "key": "音乐",
+            "value": 30
+        },
+        {
+            "key": "读书",
+            "value": 31
+        },
+        {
+            "key": "美术",
+            "value": 32
+        },
+        {
+            "key": "English",
+            "value": 36
+        },
+        {
+            "key": "摄影",
+            "value": 51
+        },
+        {
+            "key": "站务",
+            "value": 19
+        }
+    ],
+    "25": [
+        {
+            "key": "分类",
+            "value": 0
+        },
+        {
+            "key": "美食",
+            "value": 34
+        },
+        {
+            "key": "出游",
+            "value": 35
+        },
+        {
+            "key": "兴趣",
+            "value": 54
+        },
+        {
+            "key": "站务",
+            "value": 19
+        }
+    ],
+    "50": [
+        {
+            "key": "分类信息",
+            "value": 0
+        },
+        {
+            "key": "分类",
+            "value": 0
+        },
+        {
+            "key": "UMPC",
+            "value": 62
+        },
+        {
+            "key": "笔记本电脑",
+            "value": 3
+        },
+        {
+            "key": "MP3随身听",
+            "value": 6
+        },
+        {
+            "key": "Gadgets",
+            "value": 20
+        },
+        {
+            "key": "DC",
+            "value": 52
+        },
+        {
+            "key": "游戏机",
+            "value": 53
+        },
+        {
+            "key": "站务",
+            "value": 19
+        }
+    ],
+    "53": [
+        {
+            "key": "分类信息",
+            "value": 0
+        },
+        {
+            "key": "分类",
+            "value": 0
+        },
+        {
+            "key": "BUG报告",
+            "value": 60
+        }
+    ],
+    "59": [
+        {
+            "key": "分类",
+            "value": 0
+        },
+        {
+            "key": "Kindle",
+            "value": 68
+        },
+        {
+            "key": "SONY",
+            "value": 69
+        },
+        {
+            "key": "国产",
+            "value": 70
+        },
+        {
+            "key": "资源",
+            "value": 72
+        },
+        {
+            "key": "综合",
+            "value": 73
+        },
+        {
+            "key": "交流",
+            "value": 75
+        },
+        {
+            "key": "Nook",
+            "value": 77
+        },
+        {
+            "key": "求助",
+            "value": 18
+        },
+        {
+            "key": "站务",
+            "value": 19
+        }
+    ],
+    "62": [
+        {
+            "key": "分类",
+            "value": 0
+        },
+        {
+            "key": "各类配件",
+            "value": 7
+        },
+        {
+            "key": "ROM",
+            "value": 16
+        },
+        {
+            "key": "硬件报告",
+            "value": 17
+        },
+        {
+            "key": "业界",
+            "value": 41
+        },
+        {
+            "key": "各类软件",
+            "value": 47
+        },
+        {
+            "key": "综合",
+            "value": 73
+        },
+        {
+            "key": "安卓",
+            "value": 74
+        },
+        {
+            "key": "交流",
+            "value": 75
+        },
+        {
+            "key": "求助",
+            "value": 18
+        },
+        {
+            "key": "站务",
+            "value": 19
+        }
+    ],
+    "65": [
+        {
+            "key": "分类",
+            "value": 0
+        },
+        {
+            "key": "聚会",
+            "value": 9
+        },
+        {
+            "key": "汽车",
+            "value": 33
+        },
+        {
+            "key": "大杂烩",
+            "value": 38
+        },
+        {
+            "key": "助学",
+            "value": 40
+        },
+        {
+            "key": "Discovery",
+            "value": 56
+        },
+        {
+            "key": "投资",
+            "value": 57
+        },
+        {
+            "key": "职场",
+            "value": 58
+        },
+        {
+            "key": "文艺",
+            "value": 65
+        },
+        {
+            "key": "版喃",
+            "value": 66
+        },
+        {
+            "key": "显摆",
+            "value": 67
+        },
+        {
+            "key": "晒物劝败",
+            "value": 79
+        },
+        {
+            "key": "YY",
+            "value": 39
+        },
+        {
+            "key": "站务",
+            "value": 19
+        }
+    ]
+}

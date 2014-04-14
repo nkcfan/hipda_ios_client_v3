@@ -1,0 +1,212 @@
+PODS:
+  - AFNetworking (1.3.3)
+  - ALActionBlocks (1.0.3)
+  - cdebug (0.1.1)
+  - FMDB (2.2):
+    - FMDB/standard
+  - FMDB/common (2.2)
+  - FMDB/standard (2.2):
+    - FMDB/common
+  - FoundationExtension/FoundationExtension (0.46):
+    - cdebug (~> 0.1)
+  - FoundationExtension/UIKitExtension (0.46):
+    - cdebug (~> 0.1)
+    - FoundationExtension/FoundationExtension
+  - GIKPopoverBackgroundView/Core (0.0.1)
+  - HMSegmentedControl (1.3.0)
+  - JDStatusBarNotification (1.4.7)
+  - JSMessagesViewController (4.0.2):
+    - JSQSystemSoundPlayer
+  - JSQSystemSoundPlayer (1.4.0)
+  - MCSwipeTableViewCell (2.1.0)
+  - MTLog (0.6.1)
+  - NSString+Emoji (0.0.2)
+  - RegexKitLite (4.0)
+  - SDWebImage (3.6):
+    - SDWebImage/Core
+  - SDWebImage-ProgressView (0.3.1):
+    - SDWebImage (~> 3.0)
+  - SDWebImage/Core (3.6)
+  - SevenSwitch (1.3.0)
+  - SKBounceAnimation (1.0.04)
+  - SVProgressHUD (1.0)
+  - UI7Kit (0.9.18):
+    - UI7Kit/All
+  - UI7Kit/All (0.9.18):
+    - UI7Kit/UI7ActionSheet
+    - UI7Kit/UI7ActivityViewController
+    - UI7Kit/UI7AlertView
+    - UI7Kit/UI7BarButtonItem
+    - UI7Kit/UI7Button
+    - UI7Kit/UI7Color
+    - UI7Kit/UI7Font
+    - UI7Kit/UI7NavigationBar
+    - UI7Kit/UI7NavigationController
+    - UI7Kit/UI7PickerView
+    - UI7Kit/UI7PopoverController
+    - UI7Kit/UI7ProgressView
+    - UI7Kit/UI7SearchBar
+    - UI7Kit/UI7SegmentedControl
+    - UI7Kit/UI7Slider
+    - UI7Kit/UI7Stepper
+    - UI7Kit/UI7Switch/SevenSwitch
+    - UI7Kit/UI7TabBar
+    - UI7Kit/UI7TabBarController
+    - UI7Kit/UI7TabBarItem
+    - UI7Kit/UI7TableView
+    - UI7Kit/UI7TableViewCell
+    - UI7Kit/UI7TextField
+    - UI7Kit/UI7Toolbar
+    - UI7Kit/UI7View
+    - UI7Kit/UI7ViewController
+    - UI7Kit/UI7Window
+  - UI7Kit/Core (0.9.18):
+    - cdebug
+    - UI7Kit/UI7Color
+  - UI7Kit/UI7ActionSheet (0.9.18):
+    - UI7Kit/Core
+    - UI7Kit/UI7Color
+    - UI7Kit/UI7Font
+  - UI7Kit/UI7ActivityViewController (0.9.18):
+    - UI7Kit/Core
+    - UI7Kit/UI7Font
+  - UI7Kit/UI7AlertView (0.9.18):
+    - UI7Kit/Core
+    - UI7Kit/UI7Button
+    - UI7Kit/UI7Color
+    - UI7Kit/UI7Font
+  - UI7Kit/UI7BarButtonItem (0.9.18):
+    - UI7Kit/Core
+    - UI7Kit/UI7Font
+    - UIKitResources/UIButtonBar
+  - UI7Kit/UI7Button (0.9.18):
+    - UI7Kit/Core
+    - UI7Kit/UI7BarButtonItem
+    - UI7Kit/UI7Font
+    - UI7Kit/UI7View
+  - UI7Kit/UI7Color (0.9.18):
+    - FoundationExtension/UIKitExtension (~> 0.46)
+    - UIKitResources/UIAccessoryButton
+  - UI7Kit/UI7Font (0.9.18):
+    - UI7Kit/Core
+  - UI7Kit/UI7NavigationBar (0.9.18):
+    - UI7Kit/Core
+    - UI7Kit/UI7BarButtonItem
+    - UI7Kit/UI7Color
+    - UI7Kit/UI7Font
+  - UI7Kit/UI7NavigationController (0.9.18):
+    - UI7Kit/Core
+    - UI7Kit/UI7NavigationBar
+    - UI7Kit/UI7Toolbar
+  - UI7Kit/UI7PickerView (0.9.18):
+    - UI7Kit/Core
+    - UI7Kit/UI7Font
+    - UI7Kit/UI7TableView
+    - UI7Kit/UI7TableViewCell
+    - UI7Kit/UI7View
+  - UI7Kit/UI7PopoverController (0.9.18):
+    - GIKPopoverBackgroundView/Core
+    - UI7Kit/Core
+  - UI7Kit/UI7ProgressView (0.9.18):
+    - UI7Kit/Core
+    - UI7Kit/UI7Color
+    - UI7Kit/UI7View
+  - UI7Kit/UI7SearchBar (0.9.18):
+    - UI7Kit/Core
+    - UI7Kit/UI7Color
+  - UI7Kit/UI7SegmentedControl (0.9.18):
+    - UI7Kit/Core
+    - UI7Kit/UI7Font
+    - UI7Kit/UI7View
+  - UI7Kit/UI7Slider (0.9.18):
+    - UI7Kit/Core
+    - UI7Kit/UI7Color
+    - UI7Kit/UI7View
+  - UI7Kit/UI7Stepper (0.9.18):
+    - UI7Kit/Core
+    - UI7Kit/UI7View
+  - UI7Kit/UI7Switch/SevenSwitch (0.9.18):
+    - SevenSwitch (~> 1.3.0)
+    - UI7Kit/Core
+  - UI7Kit/UI7TabBar (0.9.18):
+    - UI7Kit/Core
+    - UI7Kit/UI7Color
+    - UI7Kit/UI7Font
+    - UI7Kit/UI7View
+  - UI7Kit/UI7TabBarController (0.9.18):
+    - UI7Kit/Core
+  - UI7Kit/UI7TabBarItem (0.9.18):
+    - UI7Kit/Core
+    - UIKitResources/UITabBar
+  - UI7Kit/UI7TableView (0.9.18):
+    - UI7Kit/Core
+    - UI7Kit/UI7Color
+    - UI7Kit/UI7Font
+    - UI7Kit/UI7View
+  - UI7Kit/UI7TableViewCell (0.9.18):
+    - UI7Kit/Core
+    - UI7Kit/UI7Color
+    - UI7Kit/UI7Font
+    - UI7Kit/UI7View
+  - UI7Kit/UI7TextField (0.9.18):
+    - UI7Kit/Core
+  - UI7Kit/UI7Toolbar (0.9.18):
+    - UI7Kit/Core
+    - UI7Kit/UI7Color
+  - UI7Kit/UI7View (0.9.18):
+    - UI7Kit/Core
+  - UI7Kit/UI7ViewController (0.9.18):
+    - UI7Kit/Core
+    - UI7Kit/UI7BarButtonItem
+    - UI7Kit/UI7NavigationBar
+  - UI7Kit/UI7Window (0.9.18):
+    - UI7Kit/Core
+    - UI7Kit/UI7View
+  - UIKitResources/UIAccessoryButton (7.0)
+  - UIKitResources/UIButtonBar (7.0)
+  - UIKitResources/UITabBar (7.0)
+  - ZAActivityBar (0.1.1):
+    - SKBounceAnimation (~> 1.0)
+
+DEPENDENCIES:
+  - AFNetworking (= 1.3.3)
+  - ALActionBlocks
+  - FMDB
+  - HMSegmentedControl
+  - JDStatusBarNotification
+  - JSMessagesViewController
+  - MCSwipeTableViewCell
+  - MTLog
+  - NSString+Emoji
+  - RegexKitLite
+  - SDWebImage
+  - SDWebImage-ProgressView
+  - SVProgressHUD (~> 1.0)
+  - UI7Kit
+  - ZAActivityBar
+
+SPEC CHECKSUMS:
+  AFNetworking: 61fdd49e2ffe6380378df37b3b6e70630bb9dd66
+  ALActionBlocks: ddb7dfc87c82aff450717f9b0e8b29ee55be5b6a
+  cdebug: e577d5f535bd9c39e91e269bc749b4bbd2e22c99
+  FMDB: e0dd09464b4e1a1cd7fa51ea835ae821b5656865
+  FoundationExtension: ac829a1353cfa6c4a1b157d365425b862aa04796
+  GIKPopoverBackgroundView: 6163da8cb906689732e5900c1484e6a411ce4da3
+  HMSegmentedControl: 3a58d4fc011e40c93c5299b9e8283e89c32f4c64
+  JDStatusBarNotification: 8801f6fcd7e2c2a8b01aaea5a9b049b1cc395491
+  JSMessagesViewController: 901c4f7b805e0990705d92eee8069562ac85bf9b
+  JSQSystemSoundPlayer: 28ccd01a92a0cebc6de6361e8499011b4cb6dab7
+  MCSwipeTableViewCell: 4a26851568843d15340eeca00210c219aa9f76d5
+  MTLog: 7a8b3f4ab0fcc457428d85a66b731c6e2ef64bce
+  NSString+Emoji: bcd766176b9d1f8c9a304e0796468fcb38fb57e8
+  RegexKitLite: b16f029b518614394438e17b7d1df8bfa1e5a81e
+  SDWebImage: 7eb273e54ca8a2e506ad9bd5e80c35b2a4d7c95e
+  SDWebImage-ProgressView: 472d7eb4ed2663109164afc13b936d8e3e5c8cd6
+  SevenSwitch: f1ae106a4fcb459829ba5a6a3265e7e9f873f80c
+  SKBounceAnimation: 1d53d07c3496c1f61015e9d93bbaefda8391dc0d
+  SVProgressHUD: 5e10939a296debf5fe5a5895eda9539b8b2114f1
+  UI7Kit: fe8ed7fc5b13b3ecf66fdaf42c07f17d5e648206
+  UIKitResources: 5237a3f907b433a70e7f0e7c50c4dc88c080b5f8
+  ZAActivityBar: 709b333891ee822d80fda8f641030f586e02735f
+
+COCOAPODS: 0.29.0
