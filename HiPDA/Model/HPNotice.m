@@ -79,8 +79,9 @@
                  
                  if ([type isEqualToString:@"thread"]) {
                      
-                     
-                     NSString *pattern = @"<a[^>]+>(.*?)</a>.*?ptid=(\\d+)\">(.*?)</a>";
+                     // TODO: match 1 only contains the last replier in all, which is also misleading after jumping
+                     // to the first reply in the thread
+                     NSString *pattern = @"<a[^>]+>(.*?)</a>.*?pid=(\\d+).*?ptid=(\\d+)\">(.*?)</a>";
                      
                      NSRegularExpression *reg =
                      [[NSRegularExpression alloc] initWithPattern:pattern
@@ -98,11 +99,15 @@
                          NSRange heNameRange = NSMakeRange([result rangeAtIndex:1].location, [result rangeAtIndex:1].length);
                          NSString *heName = [content substringWithRange:heNameRange];
                          
-                         NSRange tidRange = NSMakeRange([result rangeAtIndex:2].location, [result rangeAtIndex:2].length);
+                         NSRange pidRange = NSMakeRange([result rangeAtIndex:2].location, [result rangeAtIndex:2].length);
+                         NSString *pidString = [content substringWithRange:pidRange];
+                         NSInteger pid = [pidString integerValue];
+                         
+                         NSRange tidRange = NSMakeRange([result rangeAtIndex:3].location, [result rangeAtIndex:3].length);
                          NSString *tidString = [content substringWithRange:tidRange];
                          NSInteger tid = [tidString integerValue];
                          
-                         NSRange titleRange = NSMakeRange([result rangeAtIndex:3].location, [result rangeAtIndex:3].length);
+                         NSRange titleRange = NSMakeRange([result rangeAtIndex:4].location, [result rangeAtIndex:4].length);
                          NSString *title = [content substringWithRange:titleRange];
                          
                          
@@ -110,6 +115,7 @@
                          
                          HPThread *thread = [[HPThread alloc] init];
                          thread.tid = tid;
+                         thread.pid = pid;
                          thread.title = title;
                          thread.replyDetail = detail;
                          
