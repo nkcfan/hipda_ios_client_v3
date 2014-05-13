@@ -108,7 +108,8 @@
     NSArray *cachedThread = [[HPCache sharedCache] loadThread:tid page:page];
     NSDictionary *cachedInfo = [[HPCache sharedCache] loadThreadInfo:tid page:page];
     
-    if (!forceRefresh && cachedThread && redirectFromPid != 0) {
+    if (!forceRefresh && cachedThread && redirectFromPid != 0
+            && redirectFromPid == [[cachedInfo objectForKey:@"find_pid"] intValue]) {
         if (block) {
             block(cachedThread, cachedInfo, nil);
         }
