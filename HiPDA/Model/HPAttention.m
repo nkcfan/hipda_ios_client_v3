@@ -35,7 +35,7 @@ NSString *cacheKey(NSInteger tid) {
     // check
     if ([[EGOCache globalCache] hasCacheForKey:key]) {
         
-        NSDictionary *details = [NSDictionary dictionaryWithObject:@"您曾经收藏过这个主题" forKey:NSLocalizedDescriptionKey];
+        NSDictionary *details = [NSDictionary dictionaryWithObject:@"您曾经关注过这个主题" forKey:NSLocalizedDescriptionKey];
         block(NO, [NSError errorWithDomain:@"world" code:200 userInfo:details]);
         
         return;
