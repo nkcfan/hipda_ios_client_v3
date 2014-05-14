@@ -18,6 +18,7 @@
 #import "HPAccount.h"
 #import "HPCache.h"
 #import "HPFavorite.h"
+#import "HPAttention.h"
 #import "HPMessage.h"
 #import "HPHttpClient.h"
 #import "HPTheme.h"
@@ -107,6 +108,7 @@ typedef NS_ENUM(NSInteger, StoryTransitionType)
     UILabel *_pageLabel;
     
     UIButton *_favButton;
+    UIButton *_attentionButton;
     UIButton *_pageInfoButton;
     
     //
@@ -261,7 +263,10 @@ typedef NS_ENUM(NSInteger, StoryTransitionType)
 - (void)setActionButton {
     
     [self updateFavButton];
-    UIBarButtonItem* favBI = [[UIBarButtonItem alloc] initWithCustomView:_favButton];
+    [self updateAttentionButton];
+    UIBarButtonItem *favBI = [[UIBarButtonItem alloc] initWithCustomView:_favButton];
+    
+    UIBarButtonItem *attentionBI = [[UIBarButtonItem alloc] initWithCustomView:_attentionButton];
     
     UIBarButtonItem *commentBI = [UIBarButtonItem barItemWithImage:[UIImage imageNamed:@"talk.png"]
                                                               size:CGSizeMake(40.f, 40.f)
@@ -281,7 +286,7 @@ typedef NS_ENUM(NSInteger, StoryTransitionType)
     
     if (IOS7_OR_LATER) negativeSeperator.width = -12;
     
-    self.navigationItem.rightBarButtonItems = @[negativeSeperator, moreBI, pageBI, commentBI, favBI];
+    self.navigationItem.rightBarButtonItems = @[negativeSeperator, moreBI, pageBI, commentBI, attentionBI, favBI];
 }
 
 - (void)updateFavButton {
@@ -296,6 +301,20 @@ typedef NS_ENUM(NSInteger, StoryTransitionType)
         [UIImage imageNamed:@"love_selected.png"] : [UIImage imageNamed:@"love.png"];
     
     [_favButton setImage:favImg forState:UIControlStateNormal];
+}
+
+- (void)updateAttentionButton {
+    
+    if (!_attentionButton) {
+        _attentionButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _attentionButton.bounds = CGRectMake(0, 0, 40.f, 40.f);
+        [_attentionButton addTarget:self action:@selector(attention:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    UIImage *attentionImg = [HPAttention isAttentionWithTid:_thread.tid] ?
+        [UIImage imageNamed:@"love_selected.png"] : [UIImage imageNamed:@"love.png"];
+    
+    [_attentionButton setImage:attentionImg forState:UIControlStateNormal];
 }
 
 - (void)updatePageButton {
@@ -983,6 +1002,38 @@ typedef NS_ENUM(NSInteger, StoryTransitionType)
                 NSLog(@"un favorate success");
                 [SVProgressHUD showSuccessWithStatus:@"删除成功"];
                 [self updateFavButton];
+            } else {
+                NSLog(@"un favorate error %@", [error localizedDescription]);
+                [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
+            }
+        }];
+    }
+}
+
+- (void)attention:(id)sender {
+    
+    BOOL flag = [HPAttention isAttentionWithTid:_thread.tid];
+    
+    if (!flag) {
+        [SVProgressHUD showWithStatus:@"关注中..."];
+        
+        [HPAttention addAttention:_thread block:^(BOOL isSuccess, NSError *error) {
+            if (isSuccess) {
+                NSLog(@"favorate success");
+                [SVProgressHUD showSuccessWithStatus:@"关注成功"];
+                [self updateAttentionButton];
+            } else {
+                NSLog(@"favorate error %@", [error localizedDescription]);
+                [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
+            }
+        }];
+    } else {
+        [SVProgressHUD showWithStatus:@"取消关注中..."];
+        [HPAttention removeAttention:_thread.tid block:^(NSString *msg, NSError *error) {
+            if (!error) {
+                NSLog(@"un favorate success");
+                [SVProgressHUD showSuccessWithStatus:@"取消关注成功"];
+                [self updateAttentionButton];
             } else {
                 NSLog(@"un favorate error %@", [error localizedDescription]);
                 [SVProgressHUD showErrorWithStatus:[error localizedDescription]];
