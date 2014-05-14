@@ -20,12 +20,18 @@
 
 
 NSString *cacheKey(NSInteger tid) {
-    NSString *key = [NSString stringWithFormat:@"attention_%d", tid];
+    NSString *key = [NSString stringWithFormat:@"attention_%ld", tid];
     return key;
 }
 
-+ (BOOL)isAttentionWithTid:(NSInteger)tid {
++ (BOOL)isAttention:(NSInteger)tid {
     return [[EGOCache globalCache] hasCacheForKey:cacheKey(tid)];
+}
+
++ (void)cacheAttention:(NSInteger)tid {
+    // 864000 10days
+    NSString *key = cacheKey(tid);
+    [[EGOCache globalCache] setObject:@YES forKey:key withTimeoutInterval:864000];
 }
 
 + (void)addAttention:(HPThread *)thread block:(void (^)(BOOL isSuccess, NSError *error))block {
@@ -43,16 +49,16 @@ NSString *cacheKey(NSInteger tid) {
     
     // 1
     // cache
-    // 864000 10days
+    [HPAttention cacheAttention:thread.tid];
     [[EGOCache globalCache] setObject:@YES forKey:key withTimeoutInterval:864000];
     
     // 2
     // submit
     //http://www.hi-pda.com/forum/my.php?item=attention&tid=1404188&inajax=1&ajaxtarget=favorite_msg&action=add
     
-    NSString *path = [NSString stringWithFormat:@"forum/my.php?item=attention&tid=%d&inajax=1&ajaxtarget=favorite_msg&action=add", thread.tid];
+    NSString *path = [NSString stringWithFormat:@"forum/my.php?item=attention&tid=%ld&inajax=1&ajaxtarget=favorite_msg&action=add", thread.tid];
     
-    if (DEBUG_Attention) NSLog(@"favorite path %@", path);
+    if (DEBUG_Attention) NSLog(@"attention path %@", path);
     
     [[HPHttpClient sharedClient] getPathContent:path parameters:nil success:^(AFHTTPRequestOperation *operation, NSString *html) {
         
@@ -90,7 +96,7 @@ NSString *cacheKey(NSInteger tid) {
     // 2
     // submit
     //http://www.hi-pda.com/forum/my.php?item=attention&tid=1404188&inajax=1&ajaxtarget=favorite_msg&action=remove
-    NSString *path = [NSString stringWithFormat:@"forum/my.php?item=attention&tid=%d&inajax=1&ajaxtarget=favorite_msg&action=remove", tid];
+    NSString *path = [NSString stringWithFormat:@"forum/my.php?item=attention&tid=%ld&inajax=1&ajaxtarget=favorite_msg&action=remove", tid];
     
     if (DEBUG_Attention) NSLog(@"attention path %@", path);
     

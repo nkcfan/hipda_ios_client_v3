@@ -9,6 +9,7 @@
 #import "HPNotice.h"
 #import "HPThread.h"
 #import "HPSetting.h"
+#import "HPAttention.h"
 
 #import "EGOCache.h"
 #import "HPHttpClient.h"
@@ -119,6 +120,8 @@
                          thread.title = title;
                          thread.replyDetail = detail;
                          
+                         // This thread is in the server attention list, add to local cache
+                         [HPAttention cacheAttention:tid];
                          
                          if(DEBUG_MyNotice) NSLog(@"heName %@ tidString %@, title %@, detail %@", heName,tidString,title,detail);
                          

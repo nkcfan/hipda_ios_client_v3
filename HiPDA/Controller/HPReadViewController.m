@@ -311,7 +311,7 @@ typedef NS_ENUM(NSInteger, StoryTransitionType)
         [_attentionButton addTarget:self action:@selector(attention:) forControlEvents:UIControlEventTouchUpInside];
     }
     
-    UIImage *attentionImg = [HPAttention isAttentionWithTid:_thread.tid] ?
+    UIImage *attentionImg = [HPAttention isAttention:_thread.tid] ?
         [UIImage imageNamed:@"love_selected.png"] : [UIImage imageNamed:@"love.png"];
     
     [_attentionButton setImage:attentionImg forState:UIControlStateNormal];
@@ -1012,7 +1012,7 @@ typedef NS_ENUM(NSInteger, StoryTransitionType)
 
 - (void)attention:(id)sender {
     
-    BOOL flag = [HPAttention isAttentionWithTid:_thread.tid];
+    BOOL flag = [HPAttention isAttention:_thread.tid];
     
     if (!flag) {
         [SVProgressHUD showWithStatus:@"关注中..."];

@@ -10,7 +10,8 @@
 @class HPThread;
 @interface HPAttention : NSObject
 
-+ (BOOL)isAttentionWithTid:(NSInteger)tid;
++ (BOOL)isAttention:(NSInteger)tid;
++ (void)cacheAttention:(NSInteger)tid;
 + (void)addAttention:(HPThread *)thread block:(void (^)(BOOL isSuccess, NSError *error))block;
 + (void)removeAttention:(NSInteger)tid block:(void (^)(NSString *msg, NSError *error))block;
 @end
