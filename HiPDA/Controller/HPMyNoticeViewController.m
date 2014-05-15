@@ -13,6 +13,8 @@
 #import "HPReadViewController.h"
 #import "HPIndecator.h"
 #import "HPSetting.h"
+#import "HPCache.h"
+#import "HPTheme.h"
 
 #import "UIAlertView+Blocks.h"
 #import "NSString+Additions.h"
@@ -209,7 +211,22 @@
     
     CGSize size = CGSizeMake(width, height);
     
-    cell.textLabel.text = thread.title;
+    // title
+    //
+    NSString *title = thread.title;
+    NSMutableAttributedString *attrString =
+    [[NSMutableAttributedString alloc] initWithString:title];
+    
+    // isRead && thread color
+    if ([[HPCache sharedCache] isReadThread:thread.tid pid:thread.pid]) {
+        [attrString addAttribute:NSForegroundColorAttributeName value:[HPTheme readColor] range:NSMakeRange(0, [title length])];
+        
+    } else {
+        // thread color
+        [attrString addAttribute:NSForegroundColorAttributeName value:[HPTheme textColor] range:NSMakeRange(0, [title length])];
+    }
+    
+    cell.textLabel.attributedText = attrString;
     cell.detailTextLabel.text = thread.replyDetail;
     
     [cell.detailTextLabel setFrame:CGRectMake(CELL_CONTENT_MARGIN, CELL_CONTENT_MARGIN, CELL_CONTENT_WIDTH - (CELL_CONTENT_MARGIN * 2), MAX(size.height, 44.0f) + 25)];
@@ -235,6 +252,11 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     HPThread *thread = [_myNotices objectAtIndex:indexPath.row];
+    
+    // mark read
+    UI7TableViewCell *cell = (UI7TableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    [cell.textLabel setTextColor:[HPTheme readColor]];
+    [[HPCache sharedCache] readThread:thread.tid pid:thread.pid];
     
     HPReadViewController *rvc  = nil;
     
