@@ -145,7 +145,7 @@
 
 - (BOOL)isReadThread:(NSInteger)tid pid:(NSInteger)pid {
     
-    NSString *key = [NSString stringWithFormat:@"read_notice_%ld", tid, pid];
+    NSString *key = [NSString stringWithFormat:@"read_notice_%ld_%ld", tid, pid];
     
     if ([[EGOCache globalCache] hasCacheForKey:key]) {
         return YES;
@@ -155,7 +155,7 @@
 }
 - (void)readThread:(NSInteger)tid pid:(NSInteger)pid {
     
-    NSString *key = [NSString stringWithFormat:@"read_notice_%ld", tid, pid];
+    NSString *key = [NSString stringWithFormat:@"read_notice_%ld_%ld", tid, pid];
     
     if (DEBUG_CACHE) NSLog(@"readNoticeThread %@", key);
     
