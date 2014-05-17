@@ -143,6 +143,26 @@
     [[EGOCache globalCache] setObject:_bgThreads forKey:kHPBgList withTimeoutInterval:864000];
 }
 
+- (BOOL)isReadThread:(NSInteger)tid pid:(NSInteger)pid {
+    
+    NSString *key = [NSString stringWithFormat:@"read_notice_%ld_%ld", tid, pid];
+    
+    if ([[EGOCache globalCache] hasCacheForKey:key]) {
+        return YES;
+    }
+    
+    return NO;
+}
+- (void)readThread:(NSInteger)tid pid:(NSInteger)pid {
+    
+    NSString *key = [NSString stringWithFormat:@"read_notice_%ld_%ld", tid, pid];
+    
+    if (DEBUG_CACHE) NSLog(@"readNoticeThread %@", key);
+    
+    // 864000 10days
+    [[EGOCache globalCache] setObject:@YES forKey:key withTimeoutInterval:864000];
+}
+
 //
 - (BOOL)isReadThread:(NSInteger)tid {
     

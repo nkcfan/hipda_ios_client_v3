@@ -53,6 +53,8 @@
 
 - (BOOL)isReadThread:(NSInteger)tid;
 - (void)readThread:(NSInteger)tid;
+- (BOOL)isReadThread:(NSInteger)tid pid:(NSInteger)pid;
+- (void)readThread:(NSInteger)tid pid:(NSInteger)pid;
 
 - (BOOL)existAvatar:(NSInteger)uid;
 - (void)notExistAvatar:(NSInteger)uid;
