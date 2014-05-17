@@ -241,7 +241,7 @@
     
     if (thread.pid) {
         
-        // 回复 & 引用
+        // 回复 & 引用 & 回复了你的主题
         /*
          thread.tid, thread.title, thread.fid,
          
@@ -255,7 +255,7 @@
         NSLog(@"redirectFromPid %d", [thread pid]);
     } else {
         
-        // 回复了你的主题
+        // TODO: remove
         /*
          thread.tid, thread.title = title, thread.replyDetail
          */
