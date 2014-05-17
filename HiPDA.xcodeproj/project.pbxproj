@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F8262B6F95041CD9E0011B6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A47E8E7D8524543A37BADE9 /* libPods.a */; };
+		D772D4C0192283D100994743 /* HPAttention.m in Sources */ = {isa = PBXBuildFile; fileRef = D772D4BF192283D100994743 /* HPAttention.m */; };
 		EA06A60818C22E8E00EDBDEA /* UIBarButtonItem+ImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EA06A60718C22E8E00EDBDEA /* UIBarButtonItem+ImageItem.m */; };
 		EA06A61918C2384800EDBDEA /* love_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = EA06A61118C2384800EDBDEA /* love_selected.png */; };
 		EA06A61A18C2384800EDBDEA /* love_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA06A61218C2384800EDBDEA /* love_selected@2x.png */; };
@@ -346,6 +347,8 @@
 /* Begin PBXFileReference section */
 		7A47E8E7D8524543A37BADE9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A528401B22AD42F3B89FBC56 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D772D4BE192283D100994743 /* HPAttention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HPAttention.h; path = Model/HPAttention.h; sourceTree = "<group>"; };
+		D772D4BF192283D100994743 /* HPAttention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HPAttention.m; path = Model/HPAttention.m; sourceTree = "<group>"; };
 		EA06A60618C22E8E00EDBDEA /* UIBarButtonItem+ImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+ImageItem.h"; path = "Helper/UIBarButtonItem+ImageItem.h"; sourceTree = "<group>"; };
 		EA06A60718C22E8E00EDBDEA /* UIBarButtonItem+ImageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+ImageItem.m"; path = "Helper/UIBarButtonItem+ImageItem.m"; sourceTree = "<group>"; };
 		EA06A61118C2384800EDBDEA /* love_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = love_selected.png; path = Image/love_selected.png; sourceTree = "<group>"; };
@@ -872,6 +875,8 @@
 				EA4266D61842F5D100ADA47D /* HPNotice.m */,
 				EA480F2A18BA19F300C1E522 /* HPDatabase.h */,
 				EA480F2B18BA19F300C1E522 /* HPDatabase.m */,
+				D772D4BE192283D100994743 /* HPAttention.h */,
+				D772D4BF192283D100994743 /* HPAttention.m */,
 			);
 			name = More;
 			sourceTree = "<group>";
@@ -1993,6 +1998,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D772D4C0192283D100994743 /* HPAttention.m in Sources */,
 				EA499F661830C59100172989 /* HPAccount.m in Sources */,
 				EA499F501830C32700172989 /* UIImage+fixOrientation.m in Sources */,
 				EA743BBF183D00DE0067F62B /* REEmailValidator.m in Sources */,
