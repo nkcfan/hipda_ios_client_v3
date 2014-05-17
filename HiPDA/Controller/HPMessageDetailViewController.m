@@ -87,7 +87,11 @@
              
              _messages = [NSMutableArray arrayWithArray:lists];
              [self.tableView reloadData];
-             [self scrollToBottomAnimated:YES];
+             
+             // try to avoid crash
+             dispatch_async(dispatch_get_main_queue(), ^{
+                 [self scrollToBottomAnimated:YES];
+             });
              
          } else {
              [SVProgressHUD showErrorWithStatus:@"没有记录"];

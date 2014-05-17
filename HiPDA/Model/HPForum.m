@@ -92,6 +92,10 @@
     return self;
 }
 
+/*
+ * 抓论坛版块里的分类
+ * app里无用
+ */
 + (void)getType:(int)fid {
     
     NSString *path = S(@"forum/post.php?action=newthread&fid=%d", fid);

@@ -23,6 +23,8 @@
 
 #import "HPLoginViewController.h"
 
+#import <AudioToolbox/AudioToolbox.h>
+
 
 /*
  loginfield // username uid email
@@ -370,6 +372,7 @@
         
         if (pm_count || notice_count) {
             [self addLocalNotification];
+            
             if (_noticeRetrieveBlock) {
                 _noticeRetrieveBlock(UIBackgroundFetchResultNewData);
             }
@@ -409,7 +412,7 @@
     
     // Creates the notification
     UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-    localNotification.fireDate = [[NSDate date] dateByAddingTimeInterval:2];
+    localNotification.fireDate = [[NSDate date] dateByAddingTimeInterval:1];
     localNotification.alertBody = msg;
     localNotification.repeatInterval = 0;
     localNotification.soundName = UILocalNotificationDefaultSoundName;
