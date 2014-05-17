@@ -82,7 +82,7 @@
                      
                      // TODO: match 1 only contains the last replier in all, which is also misleading after jumping
                      // to the first reply in the thread
-                     NSString *pattern = @"<a[^>]+>(.*?)</a>.*?pid=(\\d+).*?ptid=(\\d+)\">(.*?)</a>";
+                     NSString *pattern = @"<a[^>]+>(.*?)</a>(,<a[^>]+>.*?</a>)?.*?pid=(\\d+).*?ptid=(\\d+)\">(.*?)</a>";
                      
                      NSRegularExpression *reg =
                      [[NSRegularExpression alloc] initWithPattern:pattern
@@ -100,15 +100,20 @@
                          NSRange heNameRange = NSMakeRange([result rangeAtIndex:1].location, [result rangeAtIndex:1].length);
                          NSString *heName = [content substringWithRange:heNameRange];
                          
-                         NSRange pidRange = NSMakeRange([result rangeAtIndex:2].location, [result rangeAtIndex:2].length);
+                         // If more than one replier
+                         if ([result rangeAtIndex:2].length > 0) {
+                             heName = [NSString stringWithFormat:@"%@%@", heName, @"..."];
+                         }
+                         
+                         NSRange pidRange = NSMakeRange([result rangeAtIndex:3].location, [result rangeAtIndex:3].length);
                          NSString *pidString = [content substringWithRange:pidRange];
                          NSInteger pid = [pidString integerValue];
                          
-                         NSRange tidRange = NSMakeRange([result rangeAtIndex:3].location, [result rangeAtIndex:3].length);
+                         NSRange tidRange = NSMakeRange([result rangeAtIndex:4].location, [result rangeAtIndex:4].length);
                          NSString *tidString = [content substringWithRange:tidRange];
                          NSInteger tid = [tidString integerValue];
                          
-                         NSRange titleRange = NSMakeRange([result rangeAtIndex:4].location, [result rangeAtIndex:4].length);
+                         NSRange titleRange = NSMakeRange([result rangeAtIndex:5].location, [result rangeAtIndex:5].length);
                          NSString *title = [content substringWithRange:titleRange];
                          
                          
