@@ -134,7 +134,6 @@
             *stop = YES;
         }
     }];
-    
     [self removeFavoritesAtIndex:index block:block];
 }
 

@@ -116,6 +116,10 @@ static NSString * const kHPClientBaseURLString = @"http://www.hi-pda.com/";
     return src;
 }
 
+/*
+ * 转成 utf-8
+ * 检查 是否登录
+ */
 + (NSString *)prepareHTML:(id)responseObject error:(NSError **)error{
     
     NSString *src = [HPHttpClient GBKresponse2String:responseObject];
