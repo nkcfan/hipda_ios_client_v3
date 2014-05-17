@@ -467,7 +467,7 @@ typedef NS_ENUM(NSInteger, StoryTransitionType)
     NSInteger fid = [[parameters objectForKey:@"fid"] integerValue];
     
     NSInteger page = [[parameters objectForKey:@"current_page"] integerValue];
-    
+    if ( find_pid == 0) find_pid = [[parameters objectForKey:@"find_pid"] integerValue];
     
     if (!_thread) {
         _thread = [[HPThread alloc]init];
