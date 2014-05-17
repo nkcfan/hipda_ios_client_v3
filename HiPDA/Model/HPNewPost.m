@@ -108,7 +108,8 @@
     NSArray *cachedThread = [[HPCache sharedCache] loadThread:tid page:page];
     NSDictionary *cachedInfo = [[HPCache sharedCache] loadThreadInfo:tid page:page];
     
-    if (!forceRefresh && cachedThread && redirectFromPid != 0) {
+    if (!forceRefresh && cachedThread && redirectFromPid != 0
+            && redirectFromPid == [[cachedInfo objectForKey:@"find_pid"] intValue]) {
         if (block) {
             block(cachedThread, cachedInfo, nil);
         }
@@ -425,7 +426,7 @@
     
     NSError *error;
     NSRegularExpression *regex = [NSRegularExpression
-                                  regularExpressionWithPattern:@"<table id=\"pid(\\d+).*?<tr class=\"threadad\">"
+                                  regularExpressionWithPattern:@"<table id=\"pid(\\d+)\"[^>]*>[\\s\\n]*(<tr class=\"threadad\">.*?</tr>)?.*?<tr class=\"threadad\">"
                                   options:NSRegularExpressionDotMatchesLineSeparators
                                   error:&error
                                   ];
