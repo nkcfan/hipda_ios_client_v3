@@ -80,14 +80,9 @@
 
 // const
 //
-#define kHPAccountUserName @"HPAccountUserName"
+#define kHPKeychainService @"HPAccount"
 #define kHPAccountUID @"HPAccountUID"
-
-
-#define kHPAccountPassword @"HPAccountPassword"
 #define kHPAccountUserName @"HPAccountUserName"
-#define kHPAccountQuestionid @"HPAccountQuestionid"
-#define kHPAccountAnswer @"HPAccountAnswer"
 
 /*
 #define kHPLittleTail @"HPLittleTail"
