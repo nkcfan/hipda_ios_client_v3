@@ -16,7 +16,7 @@
 
 #import "HPRearViewController.h"
 
-
+#import "SSKeychain.h"
 #import "NSString+Additions.h"
 #import "AFHTTPRequestOperation.h"
 #import "NSHTTPCookieStorage+info.h"
@@ -121,9 +121,15 @@
 - (void)_loginWithFormhash:(NSString *)formhash block:(void (^)(BOOL isLogin, NSError *error))block {
     
     NSString *username = [NSStandardUserDefaults stringForKey:kHPAccountUserName or:@""];
-    NSString *password = [NSStandardUserDefaults stringForKey:kHPAccountPassword or:@""];
-    NSString *questionid = [NSStandardUserDefaults stringForKey:kHPAccountQuestionid or:@""];
-    NSString *answer = [NSStandardUserDefaults stringForKey:kHPAccountAnswer or:@""];
+    NSString *credential = [SSKeychain passwordForService:kHPKeychainService account:username];
+    NSArray *arr = [credential componentsSeparatedByString:@"\n"];
+    if ([arr count] < 3) {
+        NSLog(@"login credential does not contain 3 components");
+        return;
+    }
+    NSString *password = arr[0];
+    NSString *questionid = arr[1];
+    NSString *answer = arr[2];
     
     NSDictionary *parameters = @{
          @"loginfield":@"username",
@@ -246,6 +252,9 @@
 
 - (void)logout {
     
+    NSString *username = [NSStandardUserDefaults stringForKey:kHPAccountUserName or:@""];
+    [SSKeychain deletePasswordForService:kHPKeychainService account:username];
+
 
     NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
     [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
