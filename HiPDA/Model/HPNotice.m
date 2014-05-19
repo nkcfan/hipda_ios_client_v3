@@ -117,7 +117,7 @@
                          NSString *title = [content substringWithRange:titleRange];
                          
                          
-                         NSString *detail = [NSString stringWithFormat:@"「%@」回复的您的主题", heName];
+                         NSString *detail = [NSString stringWithFormat:@"「%@」回复了您关注的主题", heName];
                          
                          HPThread *thread = [[HPThread alloc] init];
                          thread.tid = tid;
