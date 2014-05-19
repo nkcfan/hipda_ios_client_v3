@@ -68,8 +68,10 @@
 
 + (BOOL)isSetAccount {
     NSString *username = [NSStandardUserDefaults stringForKey:kHPAccountUserName or:@""];
+    NSString *credential = [SSKeychain passwordForService:kHPKeychainService account:username];
     
-    return (![username isEqualToString:@""]);
+    return (![username isEqualToString:@""] ||
+            !credential || [credential isEqualToString:@""]);
 }
 
 
@@ -125,6 +127,7 @@
     NSArray *arr = [credential componentsSeparatedByString:@"\n"];
     if ([arr count] < 3) {
         NSLog(@"login credential does not contain 3 components");
+        block(NO, [NSError errorWithDomain:@".hi-pda.com" code:NSURLErrorUserAuthenticationRequired userInfo:@{NSLocalizedDescriptionKey:@"Keychain出问题了"}]);
         return;
     }
     NSString *password = arr[0];
