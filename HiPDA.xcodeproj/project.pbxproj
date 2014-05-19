@@ -122,6 +122,7 @@
 		EA4C5A0B18E5658700B12442 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4C5A0A18E5658700B12442 /* UIImage+Resize.m */; };
 		EA4C5A0E18E5674000B12442 /* StandardPaths.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4C5A0D18E5674000B12442 /* StandardPaths.m */; };
 		EA4C5A1118E56F3500B12442 /* HPImageUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4C5A1018E56F3500B12442 /* HPImageUploadViewController.m */; };
+		EA5962C3192A24EE00D486C1 /* rear-cell-backgroud.png in Resources */ = {isa = PBXBuildFile; fileRef = EA5962C2192A24EE00D486C1 /* rear-cell-backgroud.png */; };
 		EA5DF0E118311F05008E4248 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA5DF0D918311F04008E4248 /* list@2x.png */; };
 		EA5DF0E218311F05008E4248 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = EA5DF0DA18311F04008E4248 /* list.png */; };
 		EA5DF0E318311F05008E4248 /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA5DF0DB18311F04008E4248 /* cross@2x.png */; };
@@ -515,6 +516,7 @@
 		EA4C5A0D18E5674000B12442 /* StandardPaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StandardPaths.m; path = Helper/StandardPaths.m; sourceTree = "<group>"; };
 		EA4C5A0F18E56F3500B12442 /* HPImageUploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HPImageUploadViewController.h; path = Controller/HPImageUploadViewController.h; sourceTree = "<group>"; };
 		EA4C5A1018E56F3500B12442 /* HPImageUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HPImageUploadViewController.m; path = Controller/HPImageUploadViewController.m; sourceTree = "<group>"; };
+		EA5962C2192A24EE00D486C1 /* rear-cell-backgroud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rear-cell-backgroud.png"; path = "View/rear-cell-backgroud.png"; sourceTree = "<group>"; };
 		EA5DF0D918311F04008E4248 /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "list@2x.png"; path = "Image/SwipeTableViewCell/list@2x.png"; sourceTree = "<group>"; };
 		EA5DF0DA18311F04008E4248 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = list.png; path = Image/SwipeTableViewCell/list.png; sourceTree = "<group>"; };
 		EA5DF0DB18311F04008E4248 /* cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cross@2x.png"; path = "Image/SwipeTableViewCell/cross@2x.png"; sourceTree = "<group>"; };
@@ -1024,6 +1026,7 @@
 				EA80F3D518E069FA00B3633C /* post_view_dark.html */,
 				EAAE256B18E135870059EEB7 /* HPRearCell.h */,
 				EAAE256C18E135870059EEB7 /* HPRearCell.m */,
+				EA5962C2192A24EE00D486C1 /* rear-cell-backgroud.png */,
 				EA368A6A18C6000F00C5C5BD /* EGORefreshTableHeaderView */,
 				EA150EAB189165490044CE48 /* MultilineTextCell */,
 			);
@@ -1812,6 +1815,7 @@
 				EA8186B718E1DA0D0092BDD7 /* settings_highlight.png in Resources */,
 				EAD7F5E8183CC84600A750D9 /* hp_smile_coolmonkey_12.gif in Resources */,
 				EA74459218CA1E62002467EE /* compose_camera_on.png in Resources */,
+				EA5962C3192A24EE00D486C1 /* rear-cell-backgroud.png in Resources */,
 				EAD7F5EB183CC84600A750D9 /* hp_smile_coolmonkey_15.gif in Resources */,
 				EAD7F5E0183CC84600A750D9 /* hp_smile_coolmonkey_04.gif in Resources */,
 				EAD7F613183CC84600A750D9 /* hp_smile_grapeman_19.gif in Resources */,
