@@ -69,9 +69,9 @@
 + (BOOL)isSetAccount {
     NSString *username = [NSStandardUserDefaults stringForKey:kHPAccountUserName or:@""];
     NSString *credential = [SSKeychain passwordForService:kHPKeychainService account:username];
+    NSArray *arr = [credential componentsSeparatedByString:@"\n"];
     
-    return (![username isEqualToString:@""] ||
-            !credential || [credential isEqualToString:@""]);
+    return [username length] && [credential length] && [arr count] == 3;
 }
 
 
